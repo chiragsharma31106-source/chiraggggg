@@ -1,0 +1,46 @@
+# SIH
+Attendance display
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Display</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>Attendance Details</h2>
+
+    <div class="attendance-summary">
+        <div>Total Classes: <strong>105</strong></div>
+        <div>Total Present: <strong>76</strong></div>
+        <div>Total Absent: <strong>29</strong></div>
+        <div>Total Attendance: <strong>72.38%</strong></div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Subject Type</th>
+                <th>Total Classes</th>
+                <th>Total Present</th>
+                <th>Total Absent</th>
+                <th>Total Attendance (%)</th>
+            </tr>
+        </thead>
+        <tbody id="attendance-table">
+            <!-- Rows will be inserted here by script.js -->
+        </tbody>
+    </table>
+
+    <!-- Link JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

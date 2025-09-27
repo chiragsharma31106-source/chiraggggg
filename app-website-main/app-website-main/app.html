@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Beyond The Bell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/lectures.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <img class="hamburger-menu" src="icons/hamburger-menu.svg">
+        <img class="app-logo" src="icons/app-logo-bell.jpg">
+      </div>
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="icons/search.svg">
+          <div class="tooltip">Search</div>
+        </button>
+      </div>
+       <div class="right-section">
+        <div class="college-icon-container">
+          <img class="college-icon" src="icons/college.svg">
+          <div class="tooltip"></div>
+        </div>
+        <img class="person-info" src="icons/info.svg">
+        <div class="notifications-icon-container">
+          <img class="notifications-icon" src="icons/notifications.svg">
+          <div class="notifications-count">3</div>
+        </div>
+        <img class="current-user-picture" src="channel-pictures/my_profile.webp">
+      </div>
+    </header>
+
+
+    <div class="container">
+      <nav class="sidebar">
+        <div class="sidebar-link" id="sidebar-home">
+          <img src="icons/home.svg">
+          <div>Home</div>
+        </div>
+        <div class="sidebar-link" id="sidebar-qr" >
+          <img src="icons/qr-code.svg">
+          <div>QR-code</div>
+        </div>
+        <div class="sidebar-link" id="sidebar-attendance">
+          <img src="icons/attendance.svg">
+          <div>Attendance</div>
+        </div>
+        <div class="sidebar-link" id="sidebar-image">
+          <img src="icons/avatar-human-person.svg">
+          <div>Image</div>
+        </div>
+        <div class="sidebar-link" id="sidebar-lectures">
+          <img src="icons/lectures.svg">
+          <div>Lectures</div>
+        </div>
+      </nav>
+
+      <main>
+        <section class="main-div" id="main-div">
+          <!-- Announcements Section -->
+<section class="announcements">
+    <h2>Announcements & Notices</h2>
+    <div id="announcement-list">
+        <p>Welcome to the new academic session!</p>
+        <p>Don't forget to mark attendance daily.</p>
+        <p>Next lecture: Algebra at 11:00 AM.</p>
+        <p>Submit curriculum activities by Friday.</p>
+    </div>
+    
+</section>
+
+</section>
+
+<!-- Quick Links Section -->
+<section class="quick-links">
+    <h2>Quick Links</h2>
+    <button onclick="window.location.href='index.html' "onclick="viewAttendance()">View Attendance</button>
+    <button id="openTimetableBtn">Timetable</button>
+    <button id="createActivityBtn">Create Activity</button>
+
+</section>
+
+<!-- Calendar & Gallery Section -->
+<section class="calendar-gallery">
+    <div class="calendar">
+        <!-- <h2>Event Calendar</h2>
+        <div id="calendar-placeholder">[Calendar Component Here]</div>
+        <div class="calendar"> -->
+    <h2>Event Calendar</h2>
+    <a href="https://calendar.online/f38f2ed6a162fdf146c9" target="_blank" class="calendar-link">View Event Calendar</a>
+    <div id="calendar-events">
+        <h3>Upcoming Events</h3>
+        <ul>
+            <li>Onam (Kerala): September 4-5, 2025</li>
+            <li>Id-e-Milad: September 14, 2025</li>
+            <li>Mahatma Gandhi Jayanti: October 2, 2025</li>
+            <li>Vijayadashami (Dussehra): October 2, 2025</li>
+            <li>Diwali: October 20, 2025</li>
+            <li>Govardhan Puja: October 22, 2025</li>
+            <li>Bhai Dooj: October 23, 2025</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Create Activity Modal -->
+<div id="activityModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeActivityModal()">&times;</span>
+    <h2>Create New Activity</h2>
+    <form id="activityForm" onsubmit="submitActivity(event)">
+      <label for="title">Activity Title:</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <label for="date">Due Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+    </div>
+    <section class="calendarandgallery">
+    <div class="gallery">
+        <h2>Gallery/Achievements</h2>
+        <img src="https://via.placeholder.com/100" alt="Activity 1">
+        <img src="https://via.placeholder.com/100" alt="Activity 2">
+    </div>
+</section>
+
+        </section>
+      </main>
+
+
+    </div> 
+    
+<script src="data/data.js"></script>
+<script src="scripts/lecture.js"></script>
+<script src="scripts/main.js"></script>
+
+
+  </body>
+</html>

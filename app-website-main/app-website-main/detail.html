@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Details Portal</title>
+    <style>
+        body {
+            background: #fff;
+            margin: 0;
+            height: 100vh;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: #fff;
+            box-shadow: 0 2px 14px rgba(60, 60, 100, 0.08);
+            border-radius: 15px;
+            padding: 36px 32px 26px 32px;
+        }
+        h2 {
+            margin: 0 0 20px 0;
+            color: #222941;
+            text-align: center;
+        }
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 6px 0;
+            color: #222941;
+            font-size: 15px;
+            font-weight: 450;
+        }
+        input[type="text"], input[type="date"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            border-radius: 6px;
+            border: 1px solid #d5d5e1;
+        }
+        .btn {
+            width: 100%;
+            background: #222941;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .multiselect {
+            border: 1px solid #d5d5e1;
+            border-radius: 6px;
+            padding: 10px;
+            max-height: 112px;
+            overflow-y: scroll;
+            background: #fafbfd;
+            margin-bottom: 10px;
+        }
+        .multiselect label {
+            font-size: 13.5px;
+            color: #374151;
+            margin-right: 18px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Details</h2>
+        <form>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" required>
+            
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" required>
+            
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="2" required></textarea>
+            
+            <label for="course">Course</label>
+            <input type="text" id="course" name="course" required>
+            
+            <label for="year">Year</label>
+            <select id="year" name="year" required>
+                <option value="">Select Year</option>
+                <option value="1st">1st</option>
+                <option value="2nd">2nd</option>
+                <option value="3rd">3rd</option>
+                <option value="4th">4th</option>
+            </select>
+            
+            <label for="contact">Contact Number</label>
+            <input type="text" id="contact" name="contact" required pattern="\d*">
+            
+            <label>Hobbies (Select multiple)</label>
+            <div class="multiselect">
+                <label><input type="checkbox" name="hobby" value="Reading">Reading</label>
+                <label><input type="checkbox" name="hobby" value="Music">Music</label>
+                <label><input type="checkbox" name="hobby" value="Travel">Travel</label>
+                <label><input type="checkbox" name="hobby" value="Cooking">Cooking</label>
+                <label><input type="checkbox" name="hobby" value="Photography">Photography</label>
+                <label><input type="checkbox" name="hobby" value="Swimming">Swimming</label>
+                <label><input type="checkbox" name="hobby" value="Cycling">Cycling</label>
+                <label><input type="checkbox" name="hobby" value="Gardening">Gardening</label>
+                <label><input type="checkbox" name="hobby" value="Painting">Painting</label>
+                <label><input type="checkbox" name="hobby" value="Dancing">Dancing</label>
+                <label><input type="checkbox" name="hobby" value="Writing">Writing</label>
+                <label><input type="checkbox" name="hobby" value="Gaming">Gaming</label>
+                <label><input type="checkbox" name="hobby" value="Running">Running</label>
+                <label><input type="checkbox" name="hobby" value="Yoga">Yoga</label>
+                <label><input type="checkbox" name="hobby" value="Volunteering">Volunteering</label>
+            </div>
+            <button type="button"  onclick="window.location.href='app.html' "class="btn">Submit Details</button>
+        </form>
+    </div>
+   
+
+</body>
+</html>
+
